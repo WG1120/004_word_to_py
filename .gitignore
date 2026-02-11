@@ -20,11 +20,14 @@ env/
 
 # Environment variables
 .env
+OpenAI_KEY.txt
 
 # Output files
 *.ipynb
 !examples/*.ipynb
+!sample_text.ipynb
 
 # OS
 .DS_Store
 Thumbs.db
+NUL
