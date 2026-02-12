@@ -144,6 +144,8 @@ def extract_document(docx_path: str) -> str:
 
     # 연속된 빈 줄을 최대 2줄로 제한
     result = "\n".join(paragraphs)
+    # Word의 non-breaking space(\xa0)를 일반 공백으로 치환
+    result = result.replace("\xa0", " ")
     while "\n\n\n" in result:
         result = result.replace("\n\n\n", "\n\n")
 

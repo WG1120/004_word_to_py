@@ -23,6 +23,7 @@ env/
 OpenAI_KEY.txt
 
 # Output files
+output/
 *.ipynb
 !examples/*.ipynb
 !sample_text.ipynb

@@ -53,7 +53,9 @@ def main():
     if args.output:
         output_path = args.output
     else:
-        output_path = str(input_path.with_suffix(".ipynb"))
+        output_dir = Path("output")
+        output_dir.mkdir(exist_ok=True)
+        output_path = str(output_dir / input_path.with_suffix(".ipynb").name)
 
     total_steps = 2 if args.dry_run else 4
 
